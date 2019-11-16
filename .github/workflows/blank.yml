@@ -16,12 +16,13 @@ jobs:
         echo $NAME
         pwd
         ls
-    - name: Run a one-line script
+    - name: Update NAME
       shell: bash
       run: |
         echo Hello, world!
-        NAME = "0931"
-    - name: Run a multi-line script
+      env:
+        NAME: "uiuew"
+    - name: TEST NAME
       shell: bash
       run: |
         echo $NAME
