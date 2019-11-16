@@ -17,6 +17,7 @@ jobs:
     - name: Check if config persists
       shell: bash
       run: |
+        whoami
         env
         git config --list
   test:
