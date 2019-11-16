@@ -10,17 +10,25 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run!!
+      shell: bash
       run: |
         pwd
         ls
     - name: Run a one-line script
+      shell: bash
       run: echo Hello, world!
     - name: Run a multi-line script
+      shell: bash
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+        test="423"
+        echo $test
     - name: Run dpkg-deb
+      shell: bash
       run: |
+        echo "UWUIFHJEWB"
+        echo $test
         dpkg-deb --help
   test:
     needs: [build]
@@ -29,6 +37,7 @@ jobs:
 
     steps:
     - name: Run!!
+      shell: bash
       run: |
         pwd
         ls
