@@ -12,9 +12,12 @@ jobs:
       run: |
         git config --global user.name "Sid"
         git config --list
+        TEST_KEY="RJKVBTJK"
+        env
     - name: Check if config persists
       shell: bash
       run: |
+        env
         git config --list
   test:
     needs: [build]
