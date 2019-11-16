@@ -4,36 +4,18 @@ on: [push]
 
 jobs:
   build:
-    env:
-      NAME: "aah"
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v1
-    - name: Run!!
+    - name: Configure git and lsit
       shell: bash
       run: |
-        echo $NAME
-        pwd
-        ls
-    - name: updeate NAME env
+        git config --global user.name "Sid"
+        git config --list
+    - name: Check if config persists
       shell: bash
       run: |
-        NAME="EWERW"
-        echo $NAME
-        env > env.file
-    - name: TEST NAME
-      shell: bash
-      run: |
-        echo $NAME
-        source env.file
-        echo $NAME
-        echo Add other actions to build,
-        echo test, and deploy your project.
-    - name: Run dpkg-deb
-      shell: bash
-      run: |
-        dpkg-deb --help
+        git config --list
   test:
     needs: [build]
     
@@ -45,4 +27,4 @@ jobs:
       run: |
         pwd
         ls
-        curl
+        curl --help
