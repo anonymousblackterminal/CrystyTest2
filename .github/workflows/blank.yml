@@ -16,12 +16,10 @@ jobs:
         echo $NAME
         pwd
         ls
-    - name: Update NAME
+    - name: check env
       shell: bash
       run: |
-        echo Hello, world!
-      env:
-        NAME: "uiuew"
+        env
     - name: TEST NAME
       shell: bash
       run: |
