@@ -18,8 +18,7 @@ jobs:
       shell: bash
       run: |
         whoami
-        env
-        git config --list
+        sudo apt install -y neofetch
   test:
     needs: [build]
     
