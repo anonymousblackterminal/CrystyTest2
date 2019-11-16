@@ -9,6 +9,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: Run!!
+      run: |
+        pwd
+        ls
     - name: Run a one-line script
       run: echo Hello, world!
     - name: Run a multi-line script
@@ -17,4 +21,4 @@ jobs:
         echo test, and deploy your project.
     - name: Run dpkg-deb
       run: |
-        dpkg-deb
+        dpkg-deb --help
