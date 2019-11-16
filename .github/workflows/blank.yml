@@ -22,3 +22,13 @@ jobs:
     - name: Run dpkg-deb
       run: |
         dpkg-deb --help
+  test:
+    needs: [build]
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Run!!
+      run: |
+        pwd
+        ls
