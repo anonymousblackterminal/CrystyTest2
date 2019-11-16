@@ -21,9 +21,12 @@ jobs:
       run: |
         NAME="EWERW"
         echo $NAME
+        env > env.file
     - name: TEST NAME
       shell: bash
       run: |
+        echo $NAME
+        source env.file
         echo $NAME
         echo Add other actions to build,
         echo test, and deploy your project.
